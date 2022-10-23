@@ -1,8 +1,10 @@
+package money
+
 @JvmInline
-value class Dollar(
+value class Dollar (
     private val amount: Int
 ): Money {
-    fun times(multiplier: Int): Dollar {
+    override fun times(multiplier: Int): Money {
         return Dollar(this.amount * multiplier)
     }
 }
