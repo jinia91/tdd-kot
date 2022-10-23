@@ -2,8 +2,8 @@ package money
 
 interface Money {
     companion object {
-        fun dollar(amount : Int) : Dollar = Dollar(amount)
-        fun won(amount: Int) : Won = Won(amount)
+        fun dollar(amount : Int) : Money = Dollar(amount)
+        fun won(amount: Int) : Money = Won(amount)
     }
     fun times(multiplier: Int): Money
 
