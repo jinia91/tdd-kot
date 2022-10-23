@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c9e40bd-b1e8-41ab-9fbc-82bce80548b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/money/Money.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Dollar.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/money/Dollar.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Money.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Won.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/money/Won.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/money/Dollar.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/money/Money.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/money/Money.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/money/Won.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/DollarTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/DollarTests.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/WonTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/WonTests.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +26,7 @@
       <list>
         <option value="Kotlin Class" />
         <option value="Kotlin Interface" />
+        <option value="Kotlin Enum" />
       </list>
     </option>
   </component>
@@ -69,7 +68,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.통화가 다른 두 금액을 더해서 주어진 환율에 맞게 변한 금액을 결과로 얻을수 있어야한다.(2) ₩5 * ₩2 = ₩20, (4) value object 패턴으로 기존 객체 불변성">
+  <component name="RunManager" selected="Gradle.Tests in 'tdd-kot.test'">
     <configuration name="통화가 다른 두 금액을 더해서 주어진 환율에 맞게 변한 금액을 결과로 얻을수 있어야한다.(2) ₩5 * ₩2 = ₩20, (4) value object 패턴으로 기존 객체 불변성" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -139,8 +138,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.통화가 다른 두 금액을 더해서 주어진 환율에 맞게 변한 금액을 결과로 얻을수 있어야한다.(2) ₩5 * ₩2 = ₩20, (4) value object 패턴으로 기존 객체 불변성" />
         <item itemvalue="Gradle.Tests in 'tdd-kot.test'" />
+        <item itemvalue="Gradle.통화가 다른 두 금액을 더해서 주어진 환율에 맞게 변한 금액을 결과로 얻을수 있어야한다.(2) ₩5 * ₩2 = ₩20, (4) value object 패턴으로 기존 객체 불변성" />
         <item itemvalue="Gradle.WonTests.통화가 다른 두 금액을 더해서 주어진 환율에 맞게 변한 금액을 결과로 얻을수 있어야한다" />
       </list>
     </recent_temporary>
@@ -153,7 +152,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666502096389</updated>
-      <workItem from="1666502098347" duration="6069000" />
+      <workItem from="1666502098347" duration="8000000" />
     </task>
     <servers />
   </component>

@@ -3,6 +3,8 @@ import org.assertj.core.api.Assertions.*
 import org.junit.jupiter.api.Test
 
 
+
+// 테스트시 세부 구현체에 대한 의존을 없애면, 세부 구현체가 엄청나게 변경되도! 테스트는 문제없으며, 비즈니스로직도 안전하다는 의미가 된다!
 class `달러 테스트` {
 
     @Test
