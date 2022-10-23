@@ -1,7 +1,7 @@
 @JvmInline
 value class Won(
-    val amount: Int
-) {
+    private val amount: Int
+): Money {
     fun times(multiplier: Int): Won {
         return Won(this.amount * multiplier)
     }
