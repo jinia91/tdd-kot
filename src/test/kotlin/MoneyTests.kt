@@ -1,4 +1,5 @@
 import io.kotest.core.spec.style.BehaviorSpec
+import org.assertj.core.api.Assertions
 
 class MoneyTests : BehaviorSpec() {
     /**
@@ -11,8 +12,11 @@ class MoneyTests : BehaviorSpec() {
          * 곱셈 연산 예시
          */
         Given("유효한 달러가 주어지면"){
+            val five = Dollar(5)
             When("2를 곱할 때"){
+                five.times(2)
                 Then("두배가 된다") {
+                    Assertions.assertThat(five.amount).isEqualTo(10)
                 }
             }
         }
