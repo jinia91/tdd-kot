@@ -60,7 +60,31 @@
       <recent name="tdd.money" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotest.MoneyTests: Given: 유효한 달러가 주어지고">
+  <component name="RunManager">
+    <configuration name="MoneyTests (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;tdd.money.MoneyTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
     <configuration name="WonTests.통화가 다른 두 금액을 더해서 주어진 환율에 맞게 변한 금액을 결과로 얻을수 있어야한다" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -132,6 +156,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.MoneyTests (1)" />
         <item itemvalue="Kotest.MoneyTests: Given: 유효한 달러가 주어지고" />
         <item itemvalue="Kotest.MoneyTests: Given: 유효한 달러가 주어지면 (1)" />
         <item itemvalue="Kotest.MoneyTests: Given: 유효한 달러가 주어지면" />
