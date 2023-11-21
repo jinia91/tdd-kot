@@ -11,20 +11,8 @@ class MoneyTests : BehaviorSpec() {
      */
     init {
         /**
-         * 곱셈 연산 예시
-         */
-        Given("유효한 달러가 주어지면"){
-            val five = Dollar(5)
-            When("2를 곱할 때"){
-                five.times(2)
-                Then("두배가 된다") {
-                    Assertions.assertThat(five.amount).isEqualTo(10)
-                }
-            }
-        }
-
-        /**
-         * Dollar 부작용
+         * - 곱셈 연산 예시
+         * - Dollar 부작용
          */
         Given("유효한 달러가 주어지고"){
             val five = Dollar(5)
