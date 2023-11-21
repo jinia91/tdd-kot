@@ -1,6 +1,7 @@
 package tdd.money
 
-class Dollar(val amount: Int) {
+class Dollar(var amount: Int) {
     fun times(multiplier: Int) {
+        amount *= multiplier
     }
 }
