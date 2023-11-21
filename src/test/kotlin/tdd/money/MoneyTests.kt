@@ -1,3 +1,5 @@
+package tdd.money
+
 import io.kotest.core.spec.style.BehaviorSpec
 import org.assertj.core.api.Assertions
 
