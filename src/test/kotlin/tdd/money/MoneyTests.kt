@@ -41,5 +41,17 @@ class MoneyTests : BehaviorSpec() {
                 }
             }
         }
+        /**
+         * - not equals()
+         */
+        Given("유효한 서로 다른 달러가 둘 주어지고"){
+            val a = Dollar(5)
+            val b = Dollar(6)
+            When("다른 금액의 달러와 비교할 때"){
+                Then("다르다") {
+                    Assertions.assertThat(a).isNotEqualTo(b)
+                }
+            }
+        }
     }
 }
