@@ -7,4 +7,10 @@ open class Money(protected val amount: Int) {
             else -> false
         }
     }
+
+    companion object {
+        fun dollar(amount: Int): Dollar {
+            return Dollar(amount)
+        }
+    }
 }
