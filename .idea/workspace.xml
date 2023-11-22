@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c9e40bd-b1e8-41ab-9fbc-82bce80548b1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/tdd/money/Dollar.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/tdd/money/Dollar.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/tdd/money/Money.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/tdd/money/Money.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/tdd/money/Won.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/tdd/money/Won.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +66,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
   <component name="ProjectId" id="2GWQvzFGMYFuTYFIJawH2IFZpxd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -86,7 +87,8 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -228,6 +230,7 @@
       <option name="presentableId" value="Default" />
       <updated>1666502096389</updated>
       <workItem from="1666502098347" duration="1134000" />
+      <workItem from="1700833995182" duration="4000" />
     </task>
     <servers />
   </component>
