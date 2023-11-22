@@ -12,7 +12,7 @@ class MoneyTests : BehaviorSpec() {
     init {
         /**
          * - 곱셈 연산 예시
-         * - Dollar 부작용
+         * - tdd.money.Dollar 부작용
          */
         Given("유효한 달러가 주어지고"){
             val five = Dollar(5)
