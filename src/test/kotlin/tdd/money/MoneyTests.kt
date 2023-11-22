@@ -14,14 +14,14 @@ class MoneyTests : BehaviorSpec() {
          * - 곱셈 연산 예시
          * - tdd.money.Dollar 부작용
          */
-        Given("유효한 달러가 주어지고"){
+        Given("유효한 달러가 주어지고") {
             val five = Dollar(5)
-            When("2를 곱할 때"){
+            When("2를 곱할 때") {
                 var product = five.times(2)
                 Then("두배가 된다") {
                     Assertions.assertThat(product).isEqualTo(Dollar(10))
                 }
-                And("그리고 3을 곱할 때"){
+                And("그리고 3을 곱할 때") {
                     product = five.times(3)
                     Then("세배가 된다") {
                         Assertions.assertThat(product).isEqualTo(Dollar(15))
@@ -33,11 +33,11 @@ class MoneyTests : BehaviorSpec() {
          * - equeals()
          * - not equals()
          */
-        Given("유효한 달러가 셋 주어지고"){
+        Given("유효한 달러가 셋 주어지고") {
             val a = Dollar(5)
             val b = Dollar(5)
             val c = Dollar(6)
-            When("비교할 때"){
+            When("비교할 때") {
                 Then("같은 값끼리는 같다") {
                     Assertions.assertThat(a).isEqualTo(b)
                 }
@@ -51,6 +51,7 @@ class MoneyTests : BehaviorSpec() {
 
         /**
          * - Won 화폐
+         * - won 화폐 곱셈 연산
          */
         Given("유효한 원화가 주어지고") {
             val five = Won(5)
@@ -64,6 +65,24 @@ class MoneyTests : BehaviorSpec() {
                     Then("세배가 된다") {
                         Assertions.assertThat(product).isEqualTo(Won(15))
                     }
+                }
+            }
+        }
+
+        /**
+         * - Won 화폐 equals()
+         */
+        Given("유효한 원화가 셋 주어지고") {
+            val a = Won(5)
+            val b = Won(5)
+            val c = Won(6)
+            When("비교할 때") {
+                Then("같은 값끼리는 같다") {
+                    Assertions.assertThat(a).isEqualTo(b)
+                }
+                Then("다른 값끼리는 다르다") {
+                    Assertions.assertThat(a).isNotEqualTo(c)
+                    Assertions.assertThat(b).isNotEqualTo(c)
                 }
             }
         }
