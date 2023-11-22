@@ -1,6 +1,6 @@
 package tdd.money
 
-class Won(private val amount: Int) : Money() {
+class Won(amount: Int) : Money(amount) {
     fun times(multiplier: Int) = Won(amount * multiplier)
 
     override fun equals(other: Any?): Boolean {
