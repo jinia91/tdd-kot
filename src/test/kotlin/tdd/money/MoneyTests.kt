@@ -31,26 +31,21 @@ class MoneyTests : BehaviorSpec() {
         }
         /**
          * - equeals()
-         */
-        Given("유효한 달러가 둘 주어지고"){
-            val a = Dollar(5)
-            val b = Dollar(5)
-            When("같은 금액의 달러와 비교할 때"){
-                Then("같다") {
-                    Assertions.assertThat(a).isEqualTo(b)
-                }
-            }
-        }
-        /**
          * - not equals()
          */
-        Given("유효한 서로 다른 달러가 둘 주어지고"){
+        Given("유효한 달러가 셋 주어지고"){
             val a = Dollar(5)
-            val b = Dollar(6)
-            When("다른 금액의 달러와 비교할 때"){
-                Then("다르다") {
-                    Assertions.assertThat(a).isNotEqualTo(b)
+            val b = Dollar(5)
+            val c = Dollar(6)
+            When("비교할 때"){
+                Then("같은 값끼리는 같다") {
+                    Assertions.assertThat(a).isEqualTo(b)
                 }
+                Then("다른 값끼리는 다르다") {
+                    Assertions.assertThat(a).isNotEqualTo(c)
+                    Assertions.assertThat(b).isNotEqualTo(c)
+                }
+
             }
         }
     }
