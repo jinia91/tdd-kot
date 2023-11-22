@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c9e40bd-b1e8-41ab-9fbc-82bce80548b1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-    </list>
+    <list default="true" id="5c9e40bd-b1e8-41ab-9fbc-82bce80548b1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,7 +93,7 @@
       <recent name="tdd.money" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.tdd-kot [buildDependents]">
+  <component name="RunManager" selected="Gradle.MoneyTests (1)">
     <configuration name="MoneyTests (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -205,8 +202,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.tdd-kot [buildDependents]" />
         <item itemvalue="Gradle.MoneyTests (1)" />
+        <item itemvalue="Gradle.tdd-kot [buildDependents]" />
         <item itemvalue="Kotest.MoneyTests: Given: 유효한 서로 다른 달러가 둘 주어지고" />
         <item itemvalue="Kotest.MoneyTests: Given: 유효한 달러가 둘 주어지고" />
         <item itemvalue="Kotest.MoneyTests: Given: 유효한 달러가 주어지면 (1)" />
