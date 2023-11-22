@@ -54,16 +54,16 @@ class MoneyTests : BehaviorSpec() {
          * - won 화폐 곱셈 연산
          */
         Given("유효한 원화가 주어지고") {
-            val five = Won(5)
+            val five = Money.won(5)
             When("2를 곱할 때") {
                 var product = five.times(2)
                 Then("두배가 된다") {
-                    Assertions.assertThat(product).isEqualTo(Won(10))
+                    Assertions.assertThat(product).isEqualTo(Money.won(10))
                 }
                 And("그리고 3을 곱할 때") {
                     product = five.times(3)
                     Then("세배가 된다") {
-                        Assertions.assertThat(product).isEqualTo(Won(15))
+                        Assertions.assertThat(product).isEqualTo(Money.won(15))
                     }
                 }
             }
@@ -92,7 +92,7 @@ class MoneyTests : BehaviorSpec() {
          */
         Given("유효한 달러와 원화가 주어지고") {
             val dollar = Money.dollar(5)
-            val won = Won(5)
+            val won = Money.won(5)
             When("비교할 때") {
                 Then("같은 값끼리는 다르다") {
                     Assertions.assertThat(dollar).isNotEqualTo(won)
