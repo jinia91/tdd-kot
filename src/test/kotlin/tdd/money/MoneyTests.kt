@@ -48,5 +48,24 @@ class MoneyTests : BehaviorSpec() {
 
             }
         }
+
+        /**
+         * - Won 화폐
+         */
+        Given("유효한 원화가 주어지고") {
+            val five = Won(5)
+            When("2를 곱할 때") {
+                var product = five.times(2)
+                Then("두배가 된다") {
+                    Assertions.assertThat(product).isEqualTo(Won(10))
+                }
+                And("그리고 3을 곱할 때") {
+                    product = five.times(3)
+                    Then("세배가 된다") {
+                        Assertions.assertThat(product).isEqualTo(Won(15))
+                    }
+                }
+            }
+        }
     }
 }
