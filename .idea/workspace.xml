@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c9e40bd-b1e8-41ab-9fbc-82bce80548b1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/tdd/money/Dollar.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/tdd/money/Dollar.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/tdd/money/Money.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/tdd/money/Money.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/tdd/money/Won.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/tdd/money/Won.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +82,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "chapter.7",
+    "git-widget-placeholder": "chapter.8",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
