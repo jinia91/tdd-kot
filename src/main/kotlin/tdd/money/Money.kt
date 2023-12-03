@@ -1,7 +1,10 @@
 package tdd.money
 
-open class Money(protected val amount: Int, currency: String) {
-    val currency: String = currency
+class Money(private val amount: Int, val currency: String) : CurrencyExpression {
+
+    fun times(multiplier: Int): Money = Money(amount * multiplier, this.currency)
+
+    operator fun plus(addend: Money): Money = Money(amount + addend.amount, this.currency)
 
     override fun equals(other: Any?): Boolean {
         return when (other) {
@@ -10,11 +13,15 @@ open class Money(protected val amount: Int, currency: String) {
         }
     }
 
-    fun times(multiplier: Int): Money? = Money(amount * multiplier, this.currency)
-
 
     override fun toString(): String {
         return "Money(amount=$amount, currency='$currency')"
+    }
+
+    override fun hashCode(): Int {
+        var result = amount
+        result = 31 * result + currency.hashCode()
+        return result
     }
 
     companion object {
