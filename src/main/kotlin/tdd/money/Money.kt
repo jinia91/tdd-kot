@@ -7,7 +7,7 @@ class Money(val amount: Double, val currency: String) : CurrencyExpression {
 
     operator fun plus(addend: Money): Sum = Sum(this, addend)
     override fun reduce(bank: Bank, to: String): Money {
-        val rate = if (currency == "USD" && to == "KRW") 1000 else 1
+        val rate = bank.rate(currency, to)
         return Money(amount / rate, to)
     }
 
