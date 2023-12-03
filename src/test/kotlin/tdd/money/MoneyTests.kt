@@ -113,5 +113,18 @@ class MoneyTests : BehaviorSpec() {
                 }
             }
         }
+
+        /**
+         * - 상위 클래스라면 값만 동등 비교
+         */
+        Given("유효한 달러와 유효한 화폐가 주어지고") {
+            val dollar = Money.dollar(5)
+            val money = Money(5, "USD")
+            When("상위 클래스라면 값만 동등 비교") {
+                Then("같은 값끼리는 같다") {
+                    Assertions.assertThat(dollar).isEqualTo(money)
+                }
+            }
+        }
     }
 }

@@ -12,6 +12,10 @@ open class Money(protected val amount: Int, currency: String) {
 
     open fun times(multiplier: Int): Money? = null
 
+    override fun toString(): String {
+        return "Money(amount=$amount, currency='$currency')"
+    }
+
     companion object {
         fun dollar(amount: Int): Dollar {
             return Dollar(amount)
