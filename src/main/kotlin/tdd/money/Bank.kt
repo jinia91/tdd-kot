@@ -5,6 +5,6 @@ class Bank {
     fun reduce(source: CurrencyExpression, to: String): Money {
         if (source is Money) return source.reduce(to)
         val sum = source as Sum
-        return sum.reduce(to)
+        return sum.reduce(this, to)
     }
 }

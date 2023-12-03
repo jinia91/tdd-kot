@@ -1,12 +1,14 @@
 package tdd.money
 
-class Money(val amount: Int, val currency: String) : CurrencyExpression {
+class Money(val amount: Double, val currency: String) : CurrencyExpression {
+    constructor(amount: Number, currency: String) : this(amount.toDouble(), currency)
 
-    fun times(multiplier: Int): Money = Money(amount * multiplier, this.currency)
+    fun times(multiplier: Double): Money = Money(amount * multiplier, this.currency)
 
     operator fun plus(addend: Money): Sum = Sum(this, addend)
-    override fun reduce(to: String): Money {
-        return this
+    override fun reduce(bank: Bank, to: String): Money {
+        val rate = if (currency == "USD" && to == "KRW") 1000 else 1
+        return Money(amount / rate, to)
     }
 
     override fun equals(other: Any?): Boolean {
@@ -24,15 +26,15 @@ class Money(val amount: Int, val currency: String) : CurrencyExpression {
     override fun hashCode(): Int {
         var result = amount
         result = 31 * result + currency.hashCode()
-        return result
+        return result.toInt()
     }
 
     companion object {
-        fun dollar(amount: Int): Money {
+        fun dollar(amount: Number): Money {
             return Money(amount, "USD")
         }
 
-        fun won(amount: Int): Money {
+        fun won(amount: Number): Money {
             return Money(amount, "KRW")
         }
     }
