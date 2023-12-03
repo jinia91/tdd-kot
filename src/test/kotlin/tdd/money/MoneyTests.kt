@@ -170,5 +170,25 @@ class MoneyTests : BehaviorSpec() {
             }
         }
 
+        /**
+         * 서로다른 화폐 더하기 테스트
+         */
+        Given("달러와 원화가 주어지고"){
+            val five = Money.dollar(5)
+            val ten = Money.won(10000)
+            val bank = Bank()
+            bank.addRate("WON", "USD", 1000)
+
+            When("더할 때"){
+                val sum : Sum = five + ten
+                val reduced = bank.reduce(sum, "USD")
+                Then("합은 15달러다"){
+                    Assertions.assertThat(reduced).isEqualTo(Money.dollar(15))
+                }
+                Then("합은 10이 아니다"){
+                    Assertions.assertThat(reduced).isNotEqualTo(Money.dollar(10))
+                }
+            }
+        }
     }
 }

@@ -3,7 +3,7 @@ package tdd.money
 class Money(val amount: Double, val currency: String) : CurrencyExpression {
     constructor(amount: Number, currency: String) : this(amount.toDouble(), currency)
 
-    fun times(multiplier: Double): Money = Money(amount * multiplier, this.currency)
+    fun times(multiplier: Int): Money = Money(amount * multiplier, this.currency)
 
     operator fun plus(addend: Money): Sum = Sum(this, addend)
     override fun reduce(bank: Bank, to: String): Money {
