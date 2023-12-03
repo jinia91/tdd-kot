@@ -1,11 +1,13 @@
 package tdd.money
 
+import java.beans.Expression
+
 class Money(val amount: Double, val currency: String) : CurrencyExpression {
     constructor(amount: Number, currency: String) : this(amount.toDouble(), currency)
 
-    fun times(multiplier: Double): Money = Money(amount * multiplier, this.currency)
+    operator fun times(multiplier: Int): CurrencyExpression = Money(amount * multiplier, this.currency)
 
-    operator fun plus(addend: Money): Sum = Sum(this, addend)
+    override operator fun plus(addend: CurrencyExpression): CurrencyExpression = Sum(this, addend)
     override fun reduce(bank: Bank, to: String): Money {
         val rate = bank.rate(currency, to)
         return Money(amount / rate, to)

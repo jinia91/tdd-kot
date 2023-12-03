@@ -12,6 +12,10 @@ class Bank(
 
     fun rate(from: String, to: String): Int {
         return if (from == to) 1
-        else rates[Pair(from, to)] ?: 0
+        else rates[Pair(from, to)] ?: throw IllegalArgumentException("환율이 존재하지 않습니다.")
+    }
+
+    fun addRate(from: String, to: String, rate: Int) {
+        rates[Pair(from, to)] = rate
     }
 }

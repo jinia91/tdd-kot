@@ -17,12 +17,12 @@ class MoneyTests : BehaviorSpec() {
         Given("유효한 달러가 주어지고") {
             val five : Money = Money.dollar(5)
             When("2를 곱할 때") {
-                var product = five.times(2)
+                var product = five * 2
                 Then("두배가 된다") {
                     Assertions.assertThat(product).isEqualTo(Money.dollar(10))
                 }
                 And("그리고 3을 곱할 때") {
-                    product = five.times(3)
+                    product = five * 3
                     Then("세배가 된다") {
                         Assertions.assertThat(product).isEqualTo(Money.dollar(15))
                     }
@@ -56,12 +56,12 @@ class MoneyTests : BehaviorSpec() {
         Given("유효한 원화가 주어지고") {
             val five = Money.won(5)
             When("2를 곱할 때") {
-                var product = five.times(2)
+                var product = five * 2
                 Then("두배가 된다") {
                     Assertions.assertThat(product).isEqualTo(Money.won(10))
                 }
                 And("그리고 3을 곱할 때") {
-                    product = five.times(3)
+                    product = five * 3
                     Then("세배가 된다") {
                         Assertions.assertThat(product).isEqualTo(Money.won(15))
                     }
@@ -136,13 +136,25 @@ class MoneyTests : BehaviorSpec() {
             val bank = Bank()
 
             When("더할 때"){
-                val sum : Sum = five + ten
+                val sum = five + ten
                 val reduced = bank.reduce(sum, "USD")
                 Then("합은 15달러다"){
                     Assertions.assertThat(reduced).isEqualTo(Money.dollar(15))
                 }
                 Then("합은 10이 아니다"){
                     Assertions.assertThat(reduced).isNotEqualTo(Money.dollar(10))
+                }
+            }
+        }
+        /**
+         * bank 환율 테이블 테스트
+         */
+        Given("환율 테이블이 주어지고"){
+            val bank = Bank()
+            When("환율을 추가할 때"){
+                bank.addRate("WON", "USD", 1000)
+                Then("환율이 추가된다"){
+                    Assertions.assertThat(bank.rate("WON", "USD")).isEqualTo(1000)
                 }
             }
         }
@@ -162,7 +174,7 @@ class MoneyTests : BehaviorSpec() {
             }
 
             When("환율을 적용하면"){
-                bank.addRate("WON", "USD", 1000)
+                bank.addRate("KRW", "USD", 1000)
                 val reduced = bank.reduce(Money.won(1000), "USD")
                 Then("환율이 적용된다"){
                     Assertions.assertThat(reduced).isEqualTo(Money.dollar(1))
@@ -170,5 +182,25 @@ class MoneyTests : BehaviorSpec() {
             }
         }
 
+        /**
+         * 서로다른 화폐 더하기 테스트
+         */
+        Given("달러와 원화가 주어지고"){
+            val five = Money.dollar(5)
+            val ten = Money.won(10000)
+            val bank = Bank()
+            bank.addRate("KRW", "USD", 1000)
+
+            When("더할 때"){
+                val sum = five + ten
+                val reduced = bank.reduce(sum, "USD")
+                Then("합은 15달러다"){
+                    Assertions.assertThat(reduced).isEqualTo(Money.dollar(15))
+                }
+                Then("합은 10이 아니다"){
+                    Assertions.assertThat(reduced).isNotEqualTo(Money.dollar(10))
+                }
+            }
+        }
     }
 }
