@@ -9,7 +9,7 @@ class Money(private val amount: Int, val currency: String) {
         }
     }
 
-    fun times(multiplier: Int): Money? = Money(amount * multiplier, this.currency)
+    fun times(multiplier: Int): Money = Money(amount * multiplier, this.currency)
 
 
     override fun toString(): String {
