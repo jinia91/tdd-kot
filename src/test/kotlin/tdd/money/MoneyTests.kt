@@ -141,6 +141,24 @@ class MoneyTests : BehaviorSpec() {
                 Then("합은 15달러다"){
                     Assertions.assertThat(reduced).isEqualTo(Money.dollar(15))
                 }
+                Then("합은 10이 아니다"){
+                    Assertions.assertThat(reduced).isNotEqualTo(Money.dollar(10))
+                }
+            }
+        }
+
+        /**
+         *  reduce() 테스트
+         */
+        Given("달러가 주어지고"){
+            val five = Money.dollar(5)
+            val bank = Bank()
+
+            When("환율을 적용할 때"){
+                val reduced = bank.reduce(five, "USD")
+                Then("환율이 적용된다"){
+                    Assertions.assertThat(reduced).isEqualTo(Money.dollar(5))
+                }
             }
         }
     }
