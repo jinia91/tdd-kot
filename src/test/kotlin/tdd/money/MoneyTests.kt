@@ -86,5 +86,18 @@ class MoneyTests : BehaviorSpec() {
                 }
             }
         }
+
+        /**
+         * - Dollar와 Won 비교
+         */
+        Given("유효한 달러와 원화가 주어지고") {
+            val dollar = Dollar(5)
+            val won = Won(5)
+            When("비교할 때") {
+                Then("같은 값끼리는 다르다") {
+                    Assertions.assertThat(dollar).isNotEqualTo(won)
+                }
+            }
+        }
     }
 }

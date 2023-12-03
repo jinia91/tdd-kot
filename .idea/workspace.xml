@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c9e40bd-b1e8-41ab-9fbc-82bce80548b1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="5c9e40bd-b1e8-41ab-9fbc-82bce80548b1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,19 +72,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "chapter.6",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;chapter.6&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateKotlinClassDialog.RecentsKey">
       <recent name="tdd.money" />
@@ -99,7 +97,7 @@
       <recent name="tdd.money" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'tdd.money'">
+  <component name="RunManager" selected="Kotest.MoneyTests: Given: 유효한 달러와 원화가 주어지고">
     <configuration name="MoneyTests (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -114,6 +112,28 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;tdd.money.MoneyTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in 'tdd-kot.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -170,7 +190,7 @@
       <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="MoneyTests: Given: 유효한 달러가 둘 주어지고" type="ioKotest" factoryName="Kotest" temporary="true" defaultName="singleModule">
+    <configuration name="MoneyTests: Given: 유효한 달러와 원화가 주어지고" type="ioKotest" factoryName="Kotest" temporary="true" defaultName="singleModule">
       <module name="tdd-kot.test" />
       <option name="jrePath" value="" />
       <option name="jrePathEnabled" value="false" />
@@ -178,37 +198,7 @@
       <option name="workingDirectory" value="$MODULE_WORKING_DIR$" />
       <option name="programParameters" value="" />
       <option name="specName" value="tdd.money.MoneyTests" />
-      <option name="testPath" value="유효한 달러가 둘 주어지고" />
-      <option name="packageName" value="" />
-      <option name="vmparams" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MoneyTests: Given: 유효한 달러가 주어지고" type="ioKotest" factoryName="Kotest" temporary="true" defaultName="singleModule">
-      <module name="tdd-kot.test" />
-      <option name="jrePath" value="" />
-      <option name="jrePathEnabled" value="false" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" value="$MODULE_WORKING_DIR$" />
-      <option name="programParameters" value="" />
-      <option name="specName" value="tdd.money.MoneyTests" />
-      <option name="testPath" value="유효한 달러가 주어지고" />
-      <option name="packageName" value="" />
-      <option name="vmparams" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MoneyTests: Given: 유효한 서로 다른 달러가 둘 주어지고" type="ioKotest" factoryName="Kotest" temporary="true" defaultName="singleModule">
-      <module name="tdd-kot.test" />
-      <option name="jrePath" value="" />
-      <option name="jrePathEnabled" value="false" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" value="$MODULE_WORKING_DIR$" />
-      <option name="programParameters" value="" />
-      <option name="specName" value="tdd.money.MoneyTests" />
-      <option name="testPath" value="유효한 서로 다른 달러가 둘 주어지고" />
+      <option name="testPath" value="유효한 달러와 원화가 주어지고" />
       <option name="packageName" value="" />
       <option name="vmparams" value="" />
       <method v="2">
@@ -217,11 +207,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotest.MoneyTests: Given: 유효한 달러와 원화가 주어지고" />
+        <item itemvalue="Gradle.Tests in 'tdd-kot.test'" />
         <item itemvalue="Gradle.Tests in 'tdd.money'" />
         <item itemvalue="Gradle.MoneyTests (1)" />
         <item itemvalue="Gradle.tdd-kot [buildDependents]" />
-        <item itemvalue="Kotest.MoneyTests: Given: 유효한 서로 다른 달러가 둘 주어지고" />
-        <item itemvalue="Kotest.MoneyTests: Given: 유효한 달러가 둘 주어지고" />
       </list>
     </recent_temporary>
   </component>
