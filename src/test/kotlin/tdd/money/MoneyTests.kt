@@ -15,16 +15,16 @@ class MoneyTests : BehaviorSpec() {
          * - tdd.money.Dollar 부작용
          */
         Given("유효한 달러가 주어지고") {
-            val five = Dollar(5)
+            val five : Money = Money.dollar(5)
             When("2를 곱할 때") {
                 var product = five.times(2)
                 Then("두배가 된다") {
-                    Assertions.assertThat(product).isEqualTo(Dollar(10))
+                    Assertions.assertThat(product).isEqualTo(Money.dollar(10))
                 }
                 And("그리고 3을 곱할 때") {
                     product = five.times(3)
                     Then("세배가 된다") {
-                        Assertions.assertThat(product).isEqualTo(Dollar(15))
+                        Assertions.assertThat(product).isEqualTo(Money.dollar(15))
                     }
                 }
             }
@@ -34,9 +34,9 @@ class MoneyTests : BehaviorSpec() {
          * - not equals()
          */
         Given("유효한 달러가 셋 주어지고") {
-            val a = Dollar(5)
-            val b = Dollar(5)
-            val c = Dollar(6)
+            val a = Money.dollar(5)
+            val b = Money.dollar(5)
+            val c = Money.dollar(6)
             When("비교할 때") {
                 Then("같은 값끼리는 같다") {
                     Assertions.assertThat(a).isEqualTo(b)
@@ -54,16 +54,16 @@ class MoneyTests : BehaviorSpec() {
          * - won 화폐 곱셈 연산
          */
         Given("유효한 원화가 주어지고") {
-            val five = Won(5)
+            val five = Money.won(5)
             When("2를 곱할 때") {
                 var product = five.times(2)
                 Then("두배가 된다") {
-                    Assertions.assertThat(product).isEqualTo(Won(10))
+                    Assertions.assertThat(product).isEqualTo(Money.won(10))
                 }
                 And("그리고 3을 곱할 때") {
                     product = five.times(3)
                     Then("세배가 된다") {
-                        Assertions.assertThat(product).isEqualTo(Won(15))
+                        Assertions.assertThat(product).isEqualTo(Money.won(15))
                     }
                 }
             }
@@ -91,8 +91,8 @@ class MoneyTests : BehaviorSpec() {
          * - Dollar와 Won 비교
          */
         Given("유효한 달러와 원화가 주어지고") {
-            val dollar = Dollar(5)
-            val won = Won(5)
+            val dollar = Money.dollar(5)
+            val won = Money.won(5)
             When("비교할 때") {
                 Then("같은 값끼리는 다르다") {
                     Assertions.assertThat(dollar).isNotEqualTo(won)
