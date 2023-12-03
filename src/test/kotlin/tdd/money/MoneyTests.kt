@@ -154,12 +154,21 @@ class MoneyTests : BehaviorSpec() {
             val five = Money.dollar(5)
             val bank = Bank()
 
-            When("환율을 적용할 때"){
+            When("동일한 화폐로 reduce할 때"){
                 val reduced = bank.reduce(five, "USD")
-                Then("환율이 적용된다"){
+                Then("같은 화폐는 변화가 없다"){
                     Assertions.assertThat(reduced).isEqualTo(Money.dollar(5))
                 }
             }
+
+            When("환율을 적용하면"){
+                bank.addRate("WON", "USD", 1000)
+                val reduced = bank.reduce(Money.won(1000), "USD")
+                Then("환율이 적용된다"){
+                    Assertions.assertThat(reduced).isEqualTo(Money.dollar(1))
+                }
+            }
         }
+
     }
 }
