@@ -73,9 +73,9 @@ class MoneyTests : BehaviorSpec() {
          * - Won 화폐 equals()
          */
         Given("유효한 원화가 셋 주어지고") {
-            val a = Won(5)
-            val b = Won(5)
-            val c = Won(6)
+            val a = Money.won(5)
+            val b = Money.won(5)
+            val c = Money.won(6)
             When("비교할 때") {
                 Then("같은 값끼리는 같다") {
                     Assertions.assertThat(a).isEqualTo(b)
@@ -110,6 +110,19 @@ class MoneyTests : BehaviorSpec() {
                 Then("같은 값끼리는 같다") {
                     Assertions.assertThat(dollar.currency).isEqualTo("USD")
                     Assertions.assertThat(won.currency).isEqualTo("KRW")
+                }
+            }
+        }
+
+        /**
+         * - 상위 클래스라면 값만 동등 비교
+         */
+        Given("유효한 달러와 유효한 화폐가 주어지고") {
+            val dollar = Money.dollar(5)
+            val money = Money(5, "USD")
+            When("상위 클래스라면 값만 동등 비교") {
+                Then("같은 값끼리는 같다") {
+                    Assertions.assertThat(dollar).isEqualTo(money)
                 }
             }
         }
