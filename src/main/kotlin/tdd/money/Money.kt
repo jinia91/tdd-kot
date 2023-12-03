@@ -6,8 +6,6 @@ class Money(val amount: Double, val currency: String) : CurrencyExpression {
     constructor(amount: Number, currency: String) : this(amount.toDouble(), currency)
 
     operator fun times(multiplier: Int): CurrencyExpression = Money(amount * multiplier, this.currency)
-
-    override operator fun plus(addend: CurrencyExpression): CurrencyExpression = Sum(this, addend)
     override fun reduce(bank: Bank, to: String): Money {
         val rate = bank.rate(currency, to)
         return Money(amount / rate, to)
