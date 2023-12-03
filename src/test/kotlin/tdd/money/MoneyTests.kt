@@ -126,5 +126,20 @@ class MoneyTests : BehaviorSpec() {
                 }
             }
         }
+
+        /**
+         *  화폐 더하기 테스트
+         */
+        Given("달러 두개가 주어지고"){
+            val five = Money.dollar(5)
+            val ten = Money.dollar(10)
+
+            When("더할 때"){
+                val sum = five + ten
+                Then("합은 15달러다"){
+                    Assertions.assertThat(sum).isEqualTo(Money.dollar(15))
+                }
+            }
+        }
     }
 }
