@@ -1,10 +1,10 @@
 package tdd.money
 
-class Money(private val amount: Int, val currency: String) : CurrencyExpression {
+class Money(val amount: Int, val currency: String) : CurrencyExpression {
 
     fun times(multiplier: Int): Money = Money(amount * multiplier, this.currency)
 
-    operator fun plus(addend: Money): Money = Money(amount + addend.amount, this.currency)
+    operator fun plus(addend: Money): Sum = Sum(this, addend)
 
     override fun equals(other: Any?): Boolean {
         return when (other) {
