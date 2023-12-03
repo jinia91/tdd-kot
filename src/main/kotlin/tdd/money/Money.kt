@@ -1,6 +1,8 @@
 package tdd.money
 
 abstract class Money(protected val amount: Int) {
+    abstract val currency: String
+
     override fun equals(other: Any?): Boolean {
         return when (other) {
             is Money -> amount == other.amount  && javaClass == other.javaClass
