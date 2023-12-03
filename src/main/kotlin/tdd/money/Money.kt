@@ -1,7 +1,7 @@
 package tdd.money
 
-abstract class Money(protected val amount: Int) {
-    abstract val currency: String
+open class Money(protected val amount: Int, currency: String) {
+    val currency: String = currency
 
     override fun equals(other: Any?): Boolean {
         return when (other) {
@@ -10,7 +10,7 @@ abstract class Money(protected val amount: Int) {
         }
     }
 
-    abstract fun times(multiplier: Int): Money
+    open fun times(multiplier: Int): Money? = null
 
     companion object {
         fun dollar(amount: Int): Dollar {
