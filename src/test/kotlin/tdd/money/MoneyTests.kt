@@ -99,5 +99,19 @@ class MoneyTests : BehaviorSpec() {
                 }
             }
         }
+
+        /**
+         *  - 통화 개념
+         */
+        Given("유효한 달러와 원화가 각각 주어지고") {
+            val dollar = Money.dollar(5)
+            val won = Money.won(5)
+            When("통화를 확인할 때") {
+                Then("같은 값끼리는 같다") {
+                    Assertions.assertThat(dollar.currency).isEqualTo("USD")
+                    Assertions.assertThat(won.currency).isEqualTo("KRW")
+                }
+            }
+        }
     }
 }
