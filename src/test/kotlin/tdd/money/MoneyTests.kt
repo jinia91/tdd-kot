@@ -133,10 +133,11 @@ class MoneyTests : BehaviorSpec() {
         Given("달러 두개가 주어지고"){
             val five = Money.dollar(5)
             val ten = Money.dollar(10)
+            val bank = Bank()
 
             When("더할 때"){
                 val sum : CurrencyExpression = five + ten
-                val reduced = bank.reduc(sum, "USD")
+                val reduced = bank.reduce(sum, "USD")
                 Then("합은 15달러다"){
                     Assertions.assertThat(reduced).isEqualTo(Money.dollar(15))
                 }
