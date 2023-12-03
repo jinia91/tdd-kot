@@ -224,5 +224,26 @@ class MoneyTests : BehaviorSpec() {
                 }
             }
         }
+
+        /**
+         * Sum times 테스트
+         */
+        Given("달러가 셋 주어지고"){
+            val five = Money.dollar(5)
+            val ten = Money.dollar(10)
+            val twelve = Money.dollar(12)
+            val bank = Bank()
+
+            When("곱할 때"){
+                val sum = five + ten
+                val sum2 = sum * 2
+                val reduced = bank.reduce(sum2, "USD")
+                Then("합은 30달러다"){
+                    Assertions.assertThat(reduced).isEqualTo(Money.dollar(30))
+                }
+                Then("합은 10이 아니다"){
+                    Assertions.assertThat(reduced).isNotEqualTo(Money.dollar(10))
+                }
+            }
     }
 }
