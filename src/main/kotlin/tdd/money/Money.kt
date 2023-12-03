@@ -1,7 +1,6 @@
 package tdd.money
 
-open class Money(protected val amount: Int, currency: String) {
-    val currency: String = currency
+class Money(private val amount: Int, val currency: String) {
 
     override fun equals(other: Any?): Boolean {
         return when (other) {
@@ -15,6 +14,12 @@ open class Money(protected val amount: Int, currency: String) {
 
     override fun toString(): String {
         return "Money(amount=$amount, currency='$currency')"
+    }
+
+    override fun hashCode(): Int {
+        var result = amount
+        result = 31 * result + currency.hashCode()
+        return result
     }
 
     companion object {
