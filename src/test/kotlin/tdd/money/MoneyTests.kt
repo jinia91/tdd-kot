@@ -73,9 +73,9 @@ class MoneyTests : BehaviorSpec() {
          * - Won 화폐 equals()
          */
         Given("유효한 원화가 셋 주어지고") {
-            val a = Won(5)
-            val b = Won(5)
-            val c = Won(6)
+            val a = Money.won(5)
+            val b = Money.won(5)
+            val c = Money.won(6)
             When("비교할 때") {
                 Then("같은 값끼리는 같다") {
                     Assertions.assertThat(a).isEqualTo(b)

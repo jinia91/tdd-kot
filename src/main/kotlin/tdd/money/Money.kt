@@ -10,19 +10,20 @@ open class Money(protected val amount: Int, currency: String) {
         }
     }
 
-    open fun times(multiplier: Int): Money? = null
+    fun times(multiplier: Int): Money? = Money(amount * multiplier, this.currency)
+
 
     override fun toString(): String {
         return "Money(amount=$amount, currency='$currency')"
     }
 
     companion object {
-        fun dollar(amount: Int): Dollar {
-            return Dollar(amount)
+        fun dollar(amount: Int): Money {
+            return Money(amount, "USD")
         }
 
-        fun won(amount: Int): Won {
-            return Won(amount)
+        fun won(amount: Int): Money {
+            return Money(amount, "KRW")
         }
     }
 }
