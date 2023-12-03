@@ -3,7 +3,9 @@ package tdd.money
 interface CurrencyExpression{
     fun reduce(bank : Bank,to: String): Money
 
-    fun plus(addend: CurrencyExpression): CurrencyExpression
+    operator fun plus(addend: CurrencyExpression): CurrencyExpression = Sum(this, addend)
+
+    operator fun times(multiplier: Int): CurrencyExpression
 }
 
 class Sum(private val augend: CurrencyExpression, private val addend: CurrencyExpression) : CurrencyExpression {
@@ -12,7 +14,7 @@ class Sum(private val augend: CurrencyExpression, private val addend: CurrencyEx
         return Money(amount, to)
     }
 
-    override fun plus(addend: CurrencyExpression): CurrencyExpression {
-        TODO("Not yet implemented")
+    override fun times(multiplier: Int): CurrencyExpression {
+        return Sum(augend * multiplier, addend * multiplier)
     }
 }
