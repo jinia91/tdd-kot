@@ -189,7 +189,7 @@ class MoneyTests : BehaviorSpec() {
             val five = Money.dollar(5)
             val ten = Money.won(10000)
             val bank = Bank()
-            bank.addRate("WON", "USD", 1000)
+            bank.addRate("KRW", "USD", 1000)
 
             When("더할 때"){
                 val sum : Sum = five + ten
