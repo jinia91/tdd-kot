@@ -5,7 +5,7 @@ open class Money(protected val amount: Int, currency: String) {
 
     override fun equals(other: Any?): Boolean {
         return when (other) {
-            is Money -> amount == other.amount  && javaClass == other.javaClass
+            is Money -> amount == other.amount  && currency == other.currency // class가 아니라 화폐로 체크
             else -> false
         }
     }
