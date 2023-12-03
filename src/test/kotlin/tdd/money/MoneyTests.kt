@@ -146,6 +146,18 @@ class MoneyTests : BehaviorSpec() {
                 }
             }
         }
+        /**
+         * bank 환율 테이블 테스트
+         */
+        Given("환율 테이블이 주어지고"){
+            val bank = Bank()
+            When("환율을 추가할 때"){
+                bank.addRate("WON", "USD", 1000)
+                Then("환율이 추가된다"){
+                    Assertions.assertThat(bank.rate("WON", "USD")).isEqualTo(1000)
+                }
+            }
+        }
 
         /**
          *  reduce() 테스트
@@ -162,7 +174,7 @@ class MoneyTests : BehaviorSpec() {
             }
 
             When("환율을 적용하면"){
-                bank.addRate("WON", "USD", 1000)
+                bank.addRate("KRW", "USD", 1000)
                 val reduced = bank.reduce(Money.won(1000), "USD")
                 Then("환율이 적용된다"){
                     Assertions.assertThat(reduced).isEqualTo(Money.dollar(1))
