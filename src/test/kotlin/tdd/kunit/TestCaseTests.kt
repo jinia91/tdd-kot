@@ -30,4 +30,14 @@ class TestCaseTests(testName: String) : TestCase(testName) {
         check(result.fail == 1) { "테스트 결과가 다릅니다."}
         check(result.summary() == "1 run, 1 failed") { "테스트 결과가 다릅니다."}
     }
+
+    fun `suite 동작 테스트`() {
+        val suite = KUnitTestSuite()
+        suite.add(WasRun("testMethod"))
+        suite.add(WasRun("testBrokenMethod"))
+        val result = suite.run()
+        check(result.run == 2) { "테스트 결과가 다릅니다."}
+        check(result.fail == 1) { "테스트 결과가 다릅니다."}
+        check(result.summary() == "2 run, 1 failed") { "테스트 결과가 다릅니다."}
+    }
 }
