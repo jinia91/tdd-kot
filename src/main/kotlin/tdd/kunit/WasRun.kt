@@ -1,7 +1,7 @@
 package tdd.kunit
 
 class WasRun(
-    val name:String,
+    val name: () -> Unit,
     var wasRun: Boolean = false,
 ){
     fun testMethod(){
