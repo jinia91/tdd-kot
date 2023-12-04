@@ -20,5 +20,6 @@ class TestCaseTests(testName: String) : TestCase(testName) {
         test.run()
         check(test.result.run == 1) { "테스트 결과가 다릅니다."}
         check(test.result.fail == 0) { "테스트 결과가 다릅니다."}
+        check(test.result.summary() == "1 run, 0 failed") { "테스트 결과가 다릅니다."}
     }
 }
