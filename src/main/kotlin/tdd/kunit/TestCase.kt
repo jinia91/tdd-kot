@@ -3,18 +3,17 @@ package tdd.kunit
 abstract class TestCase(
     val name: String,
 ) {
-    fun run(): TestResult {
-        val test = TestResult()
+    fun run(result: TestResult): TestResult {
         setUp()
         try {
-            test.testStarted()
+            result.testStarted()
             val method = this::class.java.getMethod(name)
             method.invoke(this)
         } catch (e: Exception) {
-            test.testFailed()
+            result.testFailed(e)
         }
         tearDown()
-        return test
+        return result
     }
 
     abstract fun setUp()
