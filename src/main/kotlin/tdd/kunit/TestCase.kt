@@ -7,7 +7,10 @@ abstract class TestCase(
         setUp()
         val method = this::class.java.getMethod(name)
         method.invoke(this)
+        tearDown()
     }
 
     abstract fun setUp()
+
+    abstract fun tearDown()
 }
