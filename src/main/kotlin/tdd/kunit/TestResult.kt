@@ -8,6 +8,10 @@ class TestResult(
         run++
     }
 
+    fun testFailed() {
+        fail++
+    }
+
     fun summary(): String {
         return "$run run, $fail failed"
     }
