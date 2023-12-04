@@ -1,9 +1,10 @@
 package tdd.kunit
 
 abstract class TestCase(
-    val testCase: () -> Unit,
+    val name: String,
 ) {
-    open fun run() {
-        testCase()
+    fun run() {
+        val method = this::class.java.getMethod(name)
+        method.invoke(this)
     }
 }
