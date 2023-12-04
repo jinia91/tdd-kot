@@ -1,10 +1,11 @@
 package tdd.kunit
 
 class WasRun(
-    val name: () -> Unit,
+    testCase: () -> Unit,
     var wasRun: Boolean = false,
-){
-    fun testMethod(){
+) : TestCase(testCase){
+    override fun run(){
+        super.run()
         wasRun = true
     }
 }
