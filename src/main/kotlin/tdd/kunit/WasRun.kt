@@ -9,6 +9,10 @@ class WasRun(
         log += "setUp"
     }
 
+    override fun tearDown() {
+        log += "tearDown"
+    }
+
     fun testMethod(){
         log += "testMethod"
     }

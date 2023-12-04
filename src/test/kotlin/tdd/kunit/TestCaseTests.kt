@@ -3,8 +3,9 @@ package tdd.kunit
 class TestCaseTests(testName: String) : TestCase(testName) {
     private lateinit var test: WasRun
 
-    override fun setUp() {
-    }
+    override fun setUp() {}
+
+    override fun tearDown() {}
 
     fun `테스트케이스템플릿이 정상동작한다`() {
         test = WasRun("testMethod")
