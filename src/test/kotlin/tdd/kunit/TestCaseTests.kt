@@ -22,4 +22,12 @@ class TestCaseTests(testName: String) : TestCase(testName) {
         check(result.fail == 0) { "테스트 결과가 다릅니다."}
         check(result.summary() == "1 run, 0 failed") { "테스트 결과가 다릅니다."}
     }
+
+    fun `실패하는 테스트를 수행하고나면 테스트 결과를 확인 할 수 있다`() {
+        test = WasRun("testBrokenMethod")
+        val result = test.run()
+        check(result.run == 1) { "테스트 결과가 다릅니다."}
+        check(result.fail == 1) { "테스트 결과가 다릅니다."}
+        check(result.summary() == "1 run, 1 failed") { "테스트 결과가 다릅니다."}
+    }
 }
